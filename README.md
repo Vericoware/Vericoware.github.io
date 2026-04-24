@@ -1,4 +1,4 @@
-# Hailan Ma Academic Homepage
+# Zhenhong Sun Academic Homepage
 
 This repository contains a personal academic homepage deployed with GitHub Pages. It is built with plain HTML, CSS, and JavaScript, with no build step required.
 
