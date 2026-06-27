@@ -39,6 +39,12 @@ if ("IntersectionObserver" in window) {
 }
 
 const publicationResourceMap = {
+  "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds": {
+    official: "https://arxiv.org/abs/2606.26964",
+  },
+  "Social Structure Matters in 3D Human-Human Interaction Generation": {
+    official: "https://arxiv.org/abs/2606.24255",
+  },
   "StoryBlender: Inter-Shot Consistent and Editable 3D Storyboard with Spatial-temporal Dynamics": {
     official: "https://arxiv.org/abs/2604.03315",
     home: "https://engineeringai-lab.github.io/StoryBlender/",
