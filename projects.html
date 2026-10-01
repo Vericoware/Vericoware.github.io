@@ -6,7 +6,7 @@
     <title>Zhenhong Sun | Projects</title>
     <meta
       name="description"
-      content="Representative projects by Zhenhong Sun."
+      content="Research projects by Zhenhong Sun."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -30,115 +30,62 @@
           <p class="meta">Representative Projects</p>
           <h1 class="page-title">Projects</h1>
           <p class="lede">
-            Selected research and engineering projects across 3D scene modeling,
-            diffusion generation, AI for science, and efficient model design.
+            Research in MLLM understanding and diffusion models, 3D representation and
+            agentic world generation, and adaptive reasoning and self-improving agents.
           </p>
         </section>
 
         <section class="section-block">
-          <h2 class="project-group-heading">Recent Projects</h2>
+          <h2 class="project-group-heading">Research Projects</h2>
           <div class="project-entry">
             <div>
-              <div class="project-line">
-                <div class="project-title-line">Foundation Representation and Manipulation</div>
-                <div class="project-role">Lead Contributor</div>
-                <div class="project-time">Feb 2025 - Present</div>
+              <div class="project-line project-line-current">
+                <div class="project-title-line">MLLM Understanding and Diffusion Models</div>
+                <div class="project-time">Aug 2023 - Present</div>
               </div>
-              <p>
-                This project studies compact representations of 3D assets and
-                their controllable state transitions, providing the foundation
-                for manipulating and predicting the next states of assets in 3D
-                world models.
-              </p>
+              <p>Building multimodal understanding and controllable image and video generation systems.</p>
               <ul class="simple-list">
-                <li>Developed an adaptive pivot voxel representation that converts complex meshes into compact 3D tokens, enabling efficient VAE reconstruction. Submitted to a Top-Tier ML Conference: P2Voxel.</li>
-                <li>Designed a topology-aware prior for decomposing 3D meshes into meaningful parts, improving structure-aware asset manipulation. Submitted to a Top-Tier Graphics Conference: Hi-TOPS.</li>
+                <li>Adapted one Qwen3.5 MLLM to 68 video moderation policies with ParaQ-LoRA, reducing model duplication and raising average online F1 by about five points at TikTok.</li>
+                <li>Combined <a href="https://arxiv.org/abs/2504.10148">AST</a> attention tuning, <a href="https://arxiv.org/abs/2412.13486">T³-S2S</a> sketch tuning, and <a href="https://doi.org/10.1145/3664647.3680898">EGGen</a> entity guidance to reduce missing objects and attribute leakage in multi-instance images. Under Review; TMLR 2026; ACM MM 2024.</li>
+                <li>Used reward-aware sampling and diversity rewards in <a href="https://arxiv.org/abs/2601.12401">DRIFT</a> to curb diversity collapse during image-model reinforcement fine-tuning while retaining alignment. NeurIPS 2026.</li>
+                <li>Built XTalker and <a href="https://arxiv.org/abs/2602.10516">3DXTalker</a> with flow matching and separate speech, emotion, and motion controls for expressive 2D and 3D avatar animation. Under Review; arXiv 2026.</li>
               </ul>
             </div>
           </div>
-
           <div class="project-entry">
             <div>
-              <div class="project-line">
-                <div class="project-title-line">Spatial Understanding and Synthesis</div>
-                <div class="project-role">Lead Contributor</div>
+              <div class="project-line project-line-current">
+                <div class="project-title-line">3D Representation and Agentic World Generation</div>
                 <div class="project-time">Feb 2025 - Present</div>
               </div>
-              <p>
-                This project builds coherent multi-shot 3D worlds through
-                agentic generation pipelines, and uses LLM-based agents to
-                perceive and understand both static scene structures and dynamic
-                world events.
-              </p>
+              <p>Representing editable 3D assets and generating coherent, observable, dynamic worlds.</p>
               <ul class="simple-list">
-                <li>Built an executable 3D world generation pipeline that converts narrative scripts into editable multi-shot 3D scenes, improving inter-shot consistency and continuity. arXiv:2604.03315: StoryBlender.</li>
-                <li>Developed a narrative-grounded world visual attention framework that serves as the perceptual interface of 3D worlds, guiding viewpoint selection and camera trajectories to understand both static and dynamic scene events. arXiv:2606.26964: Look-Before-Move.</li>
+                <li>Developed <a href="https://arxiv.org/abs/2608.07549">P2Voxel</a> pivot-voxel tokens and <a href="https://arxiv.org/abs/2608.00767">Hi-TOPS</a> topology-aware parts to reduce mesh encoding cost and improve part decomposition. Under Review.</li>
+                <li>Built <a href="https://arxiv.org/abs/2604.03315">StoryBlender</a> with script-to-scene planning and spatial grounding to reduce identity and layout drift across editable 3D storyboard shots. ECCV 2026.</li>
+                <li>Built <a href="https://arxiv.org/abs/2606.26964">Look-Before-Move</a> with semantic observation targets and viewpoint search to choose visible subjects and feasible camera paths in dynamic 3D worlds. NeurIPS 2026.</li>
+                <li>Used phase and role planning in <a href="https://arxiv.org/abs/2606.24255">Social Structure Matters</a> to improve interaction timing and role consistency in two-person 3D world motion. Under Review.</li>
               </ul>
             </div>
           </div>
-
           <div class="project-entry">
             <div>
-              <div class="project-line">
-                <div class="project-title-line">Interaction Dynamics and Motion</div>
-                <div class="project-role">Lead Contributor</div>
+              <div class="project-line project-line-current">
+                <div class="project-title-line">Adaptive Reasoning and Self-Improving Agents</div>
                 <div class="project-time">Feb 2025 - Present</div>
               </div>
-              <p>
-                This project studies text-to-action generation for humans in 3D
-                worlds, using flow-matching generative techniques to produce
-                expressive motion and human interactions with 3D worlds.
-              </p>
+              <p>Helping agents reason, adapt decisions, and improve research workflows from feedback.</p>
               <ul class="simple-list">
-                <li>Studied expressive talking-avatar and portrait animation by modeling identity, lip synchronization, emotion, head turning, smiling, and spatial dynamics, improving controllability in talking. Submitted to IEEE Transactions on Cybernetics: XTalker; arXiv:2602.10516: 3DXTalker.</li>
-                <li>Modeled social structures in 3D human-human interaction generation, improving social coherence, interpersonal relation modeling, and motion plausibility in multi-person dynamic scenes. arXiv:2606.24255: Social Structure Matters in 3D Human-Human Interaction Generation.</li>
+                <li>Developed <a href="https://arxiv.org/abs/2608.00605">Evolutionary Decoding</a> with step-wise selection and block-wise mutation to escape confident errors in diffusion LLM mathematical reasoning. Under Review.</li>
+                <li>Built <a href="https://arxiv.org/abs/2603.03292">MA-RAG</a> to turn conflicting medical answers into retrieval queries, refining evidence across rounds to reduce hallucinations. ICML 2026.</li>
+                <li>Developed <a href="https://arxiv.org/abs/2506.01299">S-ICQL</a> with world-model-guided Q-learning and <a href="https://arxiv.org/abs/2504.15046">T2DA</a> with language-decision alignment to adapt policies from trajectories or task text. ICLR 2026; NeurIPS 2025.</li>
+                <li>Built Pathfinder with manager and execution agents, a project-task-run memory graph, and Bayesian skill feedback to reuse successful research workflows and revise weak ones.</li>
               </ul>
             </div>
           </div>
-
-          <div class="project-entry">
-            <div>
-              <div class="project-line">
-                <div class="project-title-line">Decision Intelligence and Reasoning</div>
-                <div class="project-role">Lead Contributor</div>
-                <div class="project-time">Feb 2025 - Present</div>
-              </div>
-              <p>
-                This project studies RL-based decision intelligence for action
-                generation and explores diffusion LLMs as reasoning engines for
-                perception, planning, and decision making in 3D worlds.
-              </p>
-              <ul class="simple-list">
-                <li>Developed scalable in-context and language-supervised decision learning frameworks, enabling agents to adapt policies from task context and natural language supervision across decision-making problems. ICLR 2026: Scalable; NeurIPS 2025: Text-to-Decision Agent.</li>
-                <li>Designed an evolutionary decoding strategy for diffusion-based LLMs to escape high-confidence reasoning failures, improving robustness and mathematical reasoning performance at test time. Submitted to a Top-Tier Machine Learning Conference: Escaping Confidence Trap.</li>
-              </ul>
-            </div>
-          </div>
-
         </section>
 
         <section class="section-block">
           <h2 class="project-group-heading">History Projects</h2>
-          <div class="project-entry">
-            <div>
-              <div class="project-line">
-                <div class="project-title-line">Text-to-Image Diffusion Generation</div>
-                <div class="project-role">Leader Contributor</div>
-                <div class="project-time">Aug 2023 - May 2025</div>
-              </div>
-              <p>
-                This project studies how to fine-tune diffusion models for
-                domain-specific generation problems through cross-attention
-                design and controllable generation strategies.
-              </p>
-              <ul class="simple-list">
-                <li>Developed a cross-attention enhancement for human image generation, improving body completeness and proportion quality in work published at CVPR 2024.</li>
-                <li>Developed a divide-and-conquer strategy for multi-entity generation in ACM MM 2024.</li>
-                <li>Developed two training-free strategies for detailed multi-instance scene generation, including one TMLR 2026 paper and another Journal submission.</li>
-              </ul>
-            </div>
-          </div>
-
           <div class="project-entry">
             <div>
               <div class="project-line">

@@ -39,11 +39,27 @@ if ("IntersectionObserver" in window) {
 }
 
 const publicationResourceMap = {
+  "P2Voxel: Pyramid Pivot Voxelization for 3D Mesh Tokenization": {
+    official: "https://arxiv.org/abs/2608.07549",
+  },
+  "Hi-TOPS: Hierarchical Topology-aware Scoring Prior for 3D Part Decomposition": {
+    official: "https://arxiv.org/abs/2608.00767",
+    github: "https://github.com/EngineeringAI-LAB/HITOPS",
+  },
   "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds": {
     official: "https://arxiv.org/abs/2606.26964",
+    github: "https://github.com/EngineeringAI-LAB/Look-Before-Move",
+  },
+  "XTalker: Turn, Smile, and Speak in Controllable Talking Portrait Animation": {
+    github: "https://github.com/EngineeringAI-LAB/xtalker",
+  },
+  "Escaping Confidence Trap: Evolutionary Decoding for Mathematical Reasoning in Diffusion LLMs": {
+    official: "https://arxiv.org/abs/2608.00605",
   },
   "Social Structure Matters in 3D Human-Human Interaction Generation": {
     official: "https://arxiv.org/abs/2606.24255",
+    github: "https://github.com/EngineeringAI-LAB/SocialStructureHHI",
+    hugging: "https://huggingface.co/datasets/EngineeringAI-LAB/SocialStructure",
   },
   "StoryBlender: Inter-Shot Consistent and Editable 3D Storyboard with Spatial-temporal Dynamics": {
     official: "https://arxiv.org/abs/2604.03315",
@@ -62,23 +78,26 @@ const publicationResourceMap = {
   },
   "From Conflict to Consensus: Boosting Medical Reasoning via Multi-Round Agentic RAG": {
     official: "https://arxiv.org/abs/2603.03292",
+    github: "https://github.com/NJU-RL/MA-RAG",
   },
   "Beyond the Dirac Delta: Mitigating Diversity Collapse in Reinforcement Fine-Tuning for Versatile Image Generation": {
     official: "https://arxiv.org/abs/2601.12401",
   },
   "Scalable In-Context Q-Learning": {
     official: "https://arxiv.org/abs/2506.01299",
+    github: "https://github.com/NJU-RL/SICQL",
   },
-  "T3-S2S: Training-free Triplet Tuning for Sketch to Scene Generation": {
+  "T3-S2S: Training-free Triplet Tuning for Sketch to Scene Synthesis in Controllable Concept Art Generation": {
     official: "https://arxiv.org/abs/2412.13486",
     github: "https://github.com/EngineeringAI-LAB/triplet_tuning",
   },
   "Text-to-Decision Agent: Offline Meta-Reinforcement Learning from Natural Language Supervision": {
-    official: "https://neurips.cc/virtual/2025/poster/119507",
+    official: "https://arxiv.org/abs/2504.15046",
     github: "https://github.com/NJU-RL/T2DA",
   },
   "Hierarchical and Step-Layer-Wise Tuning of Attention Specialty for Multi-Instance Synthesis in Diffusion Transformers": {
     official: "https://arxiv.org/abs/2504.10148",
+    github: "https://github.com/EngineeringAI-LAB/MIS-DiT-AST",
   },
   "Learning Informative Latent Representation for Quantum State Tomography": {
     official: "https://doi.org/10.1109/TETCI.2025.3543767",
@@ -102,14 +121,14 @@ const publicationResourceMap = {
     official: "https://doi.org/10.1109/CDC49753.2023.10384297",
   },
   "Maximizing Spatio-Temporal Entropy of Deep 3D CNNs for Efficient Video Recognition": {
-    official: "https://iclr.cc/virtual/2023/poster/11690",
+    official: "https://arxiv.org/abs/2303.02693",
     github: "https://github.com/alibaba/lightweight-neural-architecture-search",
   },
   "Attention-based Transformer Networks for Quantum State Tomography": {
     official: "https://arxiv.org/abs/2305.05433",
   },
   "MAE-DET: Revisiting Maximum Entropy Principle in Zero-Shot NAS for Efficient Object Detection": {
-    official: "https://proceedings.mlr.press/v162/sun22c.html",
+    official: "https://arxiv.org/abs/2111.13336",
     github: "https://github.com/alibaba/lightweight-neural-architecture-search",
   },
   "Entropy-Driven Mixed-Precision Quantization for Deep Network Design": {
@@ -132,6 +151,9 @@ const publicationResourceMap = {
   "Spatiotemporal Entropy Model Is All You Need for Learned Video Compression": {
     official: "https://arxiv.org/abs/2104.06083",
   },
+  "End-to-end Optimized Image Compression with Attention Mechanism": {
+    official: "https://openaccess.thecvf.com/content_CVPRW_2019/html/CLIC_2019/Zhou_End-to-end_Optimized_Image_Compression_with_Attention_Mechanism_CVPRW_2019_paper.html",
+  },
 };
 
 const resourceIconMarkup = {
@@ -151,10 +173,10 @@ function normalizeTitle(text) {
 
 function createResourceLink(type, url) {
   const labels = {
-    official: "Official",
-    home: "Home",
-    github: "Github",
-    hugging: "Hugging",
+    official: url.includes("arxiv.org") ? "arXiv" : "Paper",
+    home: "Project",
+    github: "Code",
+    hugging: "Dataset",
   };
 
   const link = document.createElement("a");
